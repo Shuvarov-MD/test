@@ -95,6 +95,12 @@ const buildImages = (cb) => {
   cb();
 };
 
+const buildFonts = (cb) => {
+  src('./src/fonts/**/*')
+    .pipe(dest('./dist/fonts'));
+  cb();
+}
+
 
 exports.start = series(parallel(pugToHTML, sassToCSS, scripts), server);
-exports.build = series(deleteFolder, parallel(pugToHTML, sassToCSS, scripts), parallel(buildHTML, buildCSS, buildImages, buildScripts));
+exports.build = series(deleteFolder, parallel(pugToHTML, sassToCSS, scripts), parallel(buildHTML, buildCSS, buildImages, buildScripts, buildFonts));
