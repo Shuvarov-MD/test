@@ -1,0 +1,72 @@
+.hero {
+  background-image: linear-gradient(270deg, $color-accent 30.83%, rgba(lighten($color-accent, 13%), 0) 140.62%), url('../images/hero/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 991px) {
+    background-image: linear-gradient(270deg, $color-accent 30.83%, rgba(lighten($color-accent, 13%), 0) 140.62%), url('../images/hero/hero-bg-992.jpg');
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(270deg, $color-accent 30.83%, rgba(lighten($color-accent, 13%), 0) 140.62%), url('../images/hero/hero-bg-768.jpg');
+  }
+
+  @media screen and (max-width: 575px) {
+    background-image: linear-gradient(270deg, $color-accent 30.83%, rgba(lighten($color-accent, 13%), 0) 140.62%), url('../images/hero/hero-bg-576.jpg');
+  }
+
+  &__title {
+    @include roboto--regular;
+    font-size: 3.5rem;
+    line-height: 1.166em;
+    margin-bottom: 1.2em;
+
+    @media screen and (max-width: 575px) {
+      font-size: 2.812rem;
+    }
+
+    &--bold {
+      font-weight: 900;
+    }
+  }
+
+  &__row {
+    &:last-of-type {
+      margin-top: 2rem;
+    }
+  }
+
+  &__col {
+    padding-bottom: 2.25rem;
+  }
+
+  &__subtitle {
+    @include roboto--bold;
+    font-size: 1.5rem;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  &__description {
+    @include exo-2--regular;
+    font-size: 1.25rem;
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+
+  &__button {
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+  }
+
+  &__note {
+    @include roboto--regular;
+    font-size: 0.875rem;
+    line-height: 1.428em;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 575px) {
+      padding-top: 1.714em;
+    }
+  }
+}

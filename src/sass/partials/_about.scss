@@ -1,0 +1,92 @@
+.about {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  background: url('../images/about/about-bg-1500.jpg') right bottom no-repeat;
+
+  @media screen and (max-width: 1199px) {
+    background-image: url('../images/about/about-bg-1200.jpg');
+    background-size: auto;
+  }
+
+  @media screen and (max-width: 991px) {
+    background-image: url('../images/about/about-bg-992.jpg');
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: url('../images/about/about-bg-768.jpg');
+  }
+
+  @media screen and (max-width: 575px) {
+    background-image: url('../images/about/about-bg-576.jpg');
+  }
+
+  &__col {
+    margin-bottom: 3.125rem;
+  }
+
+  &__title {
+    margin-bottom: 0.555em;
+  }
+
+  &__text {
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__sublist {
+    list-style: none;
+    padding-left: 4.375rem;
+    margin-bottom: 0.75em;
+
+    @media screen and (max-width: 575px) {
+      padding-left: 2.5rem;
+    }
+  }
+
+  &__item {
+    @include exo-2--regular;
+    font-size: 1.25rem;
+    line-height: 143.5%;
+  }
+
+  &__subitem {
+    &:not(:last-of-type) {
+      margin-bottom: 0.25em;
+    }
+  }
+
+  &__summary {
+    position: relative;
+    list-style: none;
+    margin-bottom: 0.75em;
+    padding-left: 1.85em;
+    cursor: pointer;
+
+    &--active {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0.187rem;
+      left: 0;
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 0.107rem solid $color-action;
+      border-radius: 50%;
+      background: url('../images/about/chevron.svg') center no-repeat;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 2.6em;
+  }
+}

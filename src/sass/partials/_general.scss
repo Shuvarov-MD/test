@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+  font-size: 16px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  @media screen and (min-width: 1500px) {
+    width: 98%;
+    max-width: 1420px;
+  }
+}
+
+.button {
+  @include roboto--bold;
+  font-size: 1.25rem;
+  line-height: 1em;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  border: none;
+  border-radius: 2.5em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s linear;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--action {
+    background-color: $color-action;
+    color: $color-light;
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        background-color: darken($color-action, 25%);
+        color: $color-light;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.section {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+
+  &--light {
+    background-color: $color-light;
+    color: $color-dark;
+  }
+
+  &--accent {
+    background-color: $color-accent;
+    color: $color-light;
+  }
+}
+
+.title {
+  @include roboto--bold;
+  font-size: 2.25rem;
+  line-height: 1.166em;
+}
+
+.text {
+  @include roboto--regular;
+  font-size: 1.25rem;
+  line-height: 143.5%;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.item, .subitem {
+  position: relative;
+  padding-left: 1.6em;
+
+  &::before {
+    position: absolute;
+    top: 0.625rem;
+    left: 0;
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $color-action;
+    border-radius: 50%;
+  }
+}
+
+.article {
+  display: flex;
+  align-items: center;
+
+  &__wrap {
+    padding: 2.687rem 1.875rem 2.687rem 3.125rem;
+    background: rgba($color-light, 0.8);
+
+    @media screen and (max-width: 767px) {
+      padding-left: 2rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__special {
+    @include roboto--bold;
+    font-size: 3rem;
+    line-height: 143.19%;
+    color: $color-action;
+  }
+
+  &__text {
+    @include roboto--bold;
+    font-size: 1.5rem;
+    line-height: 1.416em;
+    color: lighten($color-accent, 5%);
+    margin-top: 0.25em;
+  }
+}
+
+.btn {
+  &-warning {
+    color: $color-light;
+  }
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), url('../fonts/Roboto/Regular/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Regular/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'), url('../fonts/Roboto/Bold/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto/Bold/Roboto-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: local('Exo 2'), url('../fonts/Exo2/Regular/Exo2-Regular.woff') format('woff'), url('../fonts/Exo2/Regular/Exo2-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

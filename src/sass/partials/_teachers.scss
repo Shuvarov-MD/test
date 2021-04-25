@@ -1,0 +1,44 @@
+.teachers {
+  background-image: linear-gradient(90deg, $color-accent 41.95%, rgba(lighten($color-accent, 13%), 0) 268.8%), url('../images/teachers/teachers-bg.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 991px) {
+    background-image: linear-gradient(90deg, $color-accent 41.95%, rgba(lighten($color-accent, 13%), 0) 268.8%), url('../images/teachers/teachers-bg-992.jpg');
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(90deg, $color-accent 41.95%, rgba(lighten($color-accent, 13%), 0) 268.8%), url('../images/teachers/teachers-bg-768.jpg');
+  }
+
+  @media screen and (max-width: 575px) {
+    background-image: linear-gradient(90deg, $color-accent 41.95%, rgba(lighten($color-accent, 13%), 0) 268.8%), url('../images/teachers/teachers-bg-576.jpg');
+  }
+
+  &__col {
+    margin-top: 4.187rem;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 21.25rem;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__figcaption {
+    margin-top: 2.5rem;
+  }
+
+  &__name {
+    @include roboto--bold;
+    font-size: 1.5rem;
+    line-height: 1em;
+    margin-bottom: 0.833em;
+  }
+
+  &__surname {
+    display: block;
+  }
+}

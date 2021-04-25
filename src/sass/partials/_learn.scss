@@ -1,0 +1,36 @@
+.learn {
+  padding-bottom: 9.687rem;
+  background: url('../images/learn/learn-bg-1200.jpg') no-repeat;
+
+  @media screen and (max-width: 991px) {
+    background-image: url('../images/learn/learn-bg-992.jpg');
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: url('../images/learn/learn-bg-768.jpg');
+  }
+
+  @media screen and (max-width: 575px) {
+    background-image: url('../images/learn/learn-bg-576.jpg');
+  }
+
+  &__title {
+    margin-bottom: 0.694em;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 1.25em;
+    }
+  }
+
+  &__button {
+    padding-right: 4.4em;
+    padding-left: 4.4em;
+    margin-top: 16.5em;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 10.5em;
+    }
+  }
+}

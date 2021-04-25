@@ -1,0 +1,153 @@
+.training {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: linear-gradient(90deg, $color-accent 8.98%, rgba(lighten($color-accent, 13%), 0) 142.29%), url('../images/training/training-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 991px) {
+    background: linear-gradient(90deg, $color-accent 8.98%, rgba(lighten($color-accent, 13%), 0) 142.29%), url('../images/training/training-bg-992.jpg');
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 767px) {
+    background: linear-gradient(90deg, $color-accent 8.98%, rgba(lighten($color-accent, 13%), 0) 142.29%), url('../images/training/training-bg-768.jpg');
+    background-size: cover;
+  }
+
+  @media screen and (max-width: 575px) {
+    background: linear-gradient(90deg, $color-accent 8.98%, rgba(lighten($color-accent, 13%), 0) 142.29%), url('../images/training/training-bg-576.jpg');
+    background-size: cover;
+  }
+
+  &__list {
+    margin-top: 3.25rem;
+    padding-left: 1.562rem;
+  }
+
+  &__text {
+    margin-top: 2.25em;
+    font-weight: bold;
+  }
+
+  &__link {
+    @include roboto--bold;
+    display: inline-block;
+    margin-top: 3.1em;
+    font-size: 1.25rem;
+    line-height: 1em;
+    text-decoration: underline;
+    color: $color-action;
+    transition: color 0.3s linear;
+    outline: none;
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: $color-light;
+      }
+    }
+  }
+
+  &__col {
+    padding-top: 4.562rem;
+    padding-bottom: 9.375rem;
+
+    @media screen and (max-width: 1499px) {
+      padding-bottom: 4.562rem;
+    }
+  }
+
+  &__consultation {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15.5rem 8.625rem 14.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform:  translateY(-1.687rem);
+
+    @media screen and (max-width: 1499px) {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
+
+    @media screen and (max-width: 1199px) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding: 5.5rem 2rem 4.75rem;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      height: 100%;
+      width: 100%;
+      width: 70%;
+      background-image: linear-gradient(0deg, rgba($color-light, 0.8), rgba($color-light, 0.8)), url('../images/training/consultation-bg.jpg');
+      transform: skew(-15deg) translateX(-50%);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 1199px) {
+        width: 78%;
+      }
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+        transform: none;
+        left: 0;
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    @include roboto--bold;
+    margin-bottom: 0;
+    font-size: 2.25rem;
+    line-height: 1.166em;
+    text-transform: uppercase;
+    color: $color-dark;
+    text-align: center;
+
+    @media screen and (max-width: 1499px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 991px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__button {
+    position: relative;
+    margin-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    @media screen and (min-width: 576px) and (max-width: 991px) {
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+    }
+  }
+}
