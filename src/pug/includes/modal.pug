@@ -1,0 +1,18 @@
+div(class="modal fade", id="exampleModal", tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
+  div(class="modal-dialog", role="document")
+    .modal-content
+      .modal-header
+        h5(class="modal-title", id="exampleModalLabel") Новая заявка
+        button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body
+        form
+          .form-group
+            label(for="recipient-name", class="col-form-label") Заказчик:
+            input(type="text", class="form-control", id="recipient-name")
+          .form-group
+            label(for="message-text" class="col-form-label") Сообщение:
+            textarea(class="form-control" id="message-text")
+      .modal-footer
+        button(type="button" class="btn btn-secondary" data-dismiss="modal") Закрыть
+        button(type="button" class="btn btn-warning") Отправить
