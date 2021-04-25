@@ -40,6 +40,7 @@ const scripts = (cb) => {
   src('./src/scripts/modules/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
+    .pipe(dest('./src/scripts'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
@@ -55,6 +56,7 @@ const server = () => {
 
   watch('./src/sass/**/*.{sass,scss}', sassToCSS).on('change', browserSync.reload);
   watch('./src/pug/**/*.pug', pugToHTML).on('change', browserSync.reload);
+  watch('./src/scripts/modules/*.js', scripts).on('change', browserSync.reload);
 };
 
 const deleteFolder = async () => await del.sync(['./dist']);
@@ -101,6 +103,12 @@ const buildFonts = (cb) => {
   cb();
 }
 
+const buildFiles = (cb) => {
+  src('./src/files/**/*')
+    .pipe(dest('./dist/files'));
+  cb();
+}
+
 
 exports.start = series(parallel(pugToHTML, sassToCSS, scripts), server);
-exports.build = series(deleteFolder, parallel(pugToHTML, sassToCSS, scripts), parallel(buildHTML, buildCSS, buildImages, buildScripts, buildFonts));
+exports.build = series(deleteFolder, parallel(pugToHTML, sassToCSS, scripts), parallel(buildHTML, buildCSS, buildImages, buildScripts, buildFonts, buildFiles));
